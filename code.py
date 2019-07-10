@@ -1,11 +1,11 @@
 #Hangman game
 import random
-F=['apple','banana','orange','mango','strawberry','watermelon','kiwi','peach','pear','papaya','grapes','pineapple','guava','blueberry','blackberry','raspberry','apricot']
+Friut_list=['apple','banana','orange','mango','strawberry','watermelon','kiwi','peach','pear','papaya','grapes','pineapple','guava','blueberry','blackberry','raspberry','apricot']
 choice='Y'
 while choice=='Y':
-    f=random.choice(F)
+    friut=random.choice(Friut_list)
     lives=5; temp=[];word=[]
-    for i in f:
+    for i in fruit:
         word.append(i)
         temp.append('_')
     while '_' in temp and lives!=0:
@@ -23,7 +23,7 @@ while choice=='Y':
         print("GAME OVER!")
     else:
         print("YOU WIN!!!")
-    print("The word was ",f.upper())
+    print("The word was ",fruit.upper())
     choice=input("Play Again?(y/n) ").upper()
     
     
